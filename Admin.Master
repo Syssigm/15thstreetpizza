@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="PizzaV5.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>15thStreetPizza Admin</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        html, body {
+            font-family: Arial;
+        }
+         .mainTbl_grid {
+            margin-bottom: 20px;
+            width: 90%; margin: auto;
+        }
+            .mainTbl_grid h4 {
+                font-size: 18px;
+            }
+        .datagrid_style, .datagrid_style table {
+            margin: auto;
+            font-family:Arial;
+        }
+        .datagrid_style input, .datagrid_style select {
+        width: 100%;
+        }
+        .subHead {color:#006600;font-family:Arial;font-size: 18px;}
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table border="2" style="background-color: #FFFBD6; padding-left:1130px;" cellpadding="0" cellspacing="0" width="100%" height="100%">
+            <tr>
+                <td>
+                    <asp:Label ID="lblWelcome" runat="server"></asp:Label>
+                </td>
+                <td>
+                    <asp:Button ID="btnLogOut" runat="server" CausesValidation="false" Text="Logout" OnClick="btnLogOut_Click" />
+                </td>
+            </tr>
+            </table>
+         <table align="center" border="2" style="background-color: #FFFBD6" cellpadding="0" cellspacing="0" width="100%" height="100%">
+            <tr>
+                <td colspan="2" align="center" valign="bottom"><a href="#">
+                    <img src="images/15thstreetpizza-logo.png" border="0" /></a><img src="images/TopCoaster.gif" />
+
+                </td>
+            </tr>
+            <tr>
+                <td width="15%" height="500px" valign="top">
+                    <br />
+                    <br />
+                    <asp:Menu ID="mnu" runat="server" BackColor="#FFFBD6"
+                        DynamicHorizontalOffset="2" Font-Names="Verdana" 
+                        ForeColor="#990000" Font-Bold="true" Font-Italic="true" Font-Size="12px" StaticSubMenuIndent="10px" Width="100%">
+                        <StaticSelectedStyle BackColor="#FFCC66" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="8px" />
+                        <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                        <DynamicMenuStyle BackColor="#FFFBD6" />
+                        <DynamicSelectedStyle BackColor="#FFCC66" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="8px" />
+                        <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Admin_Keywords.aspx" Text="Keywords" Value="Keywords"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AdminMPMI.aspx" Text="Main Page - Main Items" Value="Main Page - Main Items"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AdminMPSI.aspx" Text="Main Page - Sub Items" Value="Main Page - Sub Items"></asp:MenuItem>
+                            <%--<asp:MenuItem NavigateUrl="~/Admin_Images.aspx" Text="Images-Admin" Value="Images-Admin"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/RegularMenu_SortOrder.aspx" Text="Regular Menu - Sorting Order" Value="Regular Menu - Sorting Order"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/MenuTab.aspx" Text="Menu-Tab Order" Value="Menu-Tab Order"></asp:MenuItem>--%>
+                            <asp:MenuItem NavigateUrl="~/Videos_Admin.aspx" Text="Videos-Admin" Value="Videos-Admin"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/admingallery.aspx" Text="Picture-Admin" Value="Picture-Admin"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AdminPictureCategory.aspx" Text="PictureCategory-Admin" Value="PictureCategory-Admin"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/InfoUpdate.aspx" Text="Infopage-Admin" Value="Infopage-Admin"></asp:MenuItem>
+<%--                        <asp:MenuItem NavigateUrl="~/AdminRegularSpecials.aspx" Text="Regular Specials" Value="Regular Specials"></asp:MenuItem>--%>
+
+                            <asp:MenuItem NavigateUrl="~/AdminLunchSpecials.aspx" Text="Lunch Specials" Value="Lunch Specials"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AdminDailySpecials.aspx" Text="Daily Specials" Value="Daily Specials"></asp:MenuItem>
+                            <%--<asp:MenuItem NavigateUrl="~/AdminPizzaSpecials.aspx" Text="Pizza Specials" Value="Pizza Specials"></asp:MenuItem>--%>
+                            <asp:MenuItem NavigateUrl="~/AdminTestimonials.aspx" Text="Testimonials-Admin" Value="Testimonials-Admin"></asp:MenuItem>
+                            <%--<asp:MenuItem NavigateUrl="~/AdminOffers.aspx" Text="Offers - Admin" Value="Offers - Admin"></asp:MenuItem>--%>
+                            <asp:MenuItem NavigateUrl="~/AdminEventsNews.aspx" Text="News & Events - Admin" Value="News & Events - Admin"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AdminContactUs.aspx" Text="ContactUs - Admin" Value="ContactUs - Admin"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AdminAboutUs.aspx" Text="AboutUs - Admin" Value="AboutUs - Admin"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AdminPdfUpload.aspx" Text="PdfFileUpload" Value="PdfFileUpload"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AdminCareers.aspx" Text="careers" Value="careers"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Logout.aspx" Text="Logout" Value="Logout"></asp:MenuItem>
+
+                        </Items>
+                    </asp:Menu>
+                </td>
+                <td style="padding-bottom: 100px;">
+                    <asp:ContentPlaceHolder ID="AdminContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,364 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="_15thstreetpizza.Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>15th Street Pizza</title>
+    <%--START:Added for getting Tracked and to see the results in Google Analytics--%>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-28177522-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <%--END:Added for getting Tracked and to see the results in Google Analytics--%>
+    <!-- Bootstrap Css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/prettyCheckable.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <link rel="stylesheet" href="css/lightslider.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/css/signup-form.css'/>
+    <script type="text/javascript" src="http://menus.singleplatform.co/businesses/storefront/?apiKey=ke09z8icq4xu8uiiccighy1bw"></script>
+<asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <nav class="navbar navbar-fixed-top nav-15">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="col-lg-5 col-md-5 col-sm-5">
+                <ul>
+                    <li class="active"><a href="Default.aspx"><span class="glyphicon glyphicon-home"></span></a></li>
+                    <li><a href="#">MENU </a>
+                        <ul>
+                            <li><a href="RegularMenu.aspx?actflag="A">REGULAR MENU</a>
+                                <a class="pdfM" href="content/15thPDFMenu.pdf" target="new"><span class="glyphicon glyphicon-arrow-right"></span>PDF MENU</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="CateringMenu.aspx">CATERING MENU</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="BeerMenu.aspx">BEER MENU</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="WineMenu.aspx">WINE MENU</a></li>
+                            <li role="separator" class="divider"></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">GALLERY</a>
+                        <ul>
+                            <li><a href="Gallery.aspx">PICTURES</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="Videos.aspx">VIDEOS</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="AlbumPictures.aspx">PICTURE ALBUM</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Register.aspx">CAREERS </a></li>
+                        <li><a href="Aboutus.aspx">ABOUT US</a>
+                            <ul>
+                            
+                                <li><a href="ContactUs.aspx">CONTACT US</a></li>
+                            </ul>
+                        </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+            <div class="col-lg-2 col-md-2 col-sm-2 center-logo padding-left-right-0"><a href="#top">
+                <img src="images/15thstreetpizza-logo.png" border="0"></a> </div>
+            <div class="col-lg-5 col-md-5 col-sm-5">
+                <ul>
+                    <li>
+                        <a href="https://www.grubhub.com/restaurant/15th-street-pizza--pub-2130-jodeco-rd-mcdonough/2091863" target="_blank" style="padding: 2px;background: #FFF;border-radius: 5px;margin-top: 2px;">
+                            <img src="images/GH-btn.jpg" style="max-height: 64px;"></a>
+                    </li>
+                    <li>
+                        <a href="https://order.tbdine.com/15th-street?src=3" target="_blank" style="padding: 1px;margin-top: 3px;background: #06556e;border-radius: 6px;">
+                            <img src="images/TB-btn.png" style="max-height: 66px;"></a>
+                    </li>
+                </ul>
+            </div>
+
+           <a href="OrderOnline.aspx" class="order-btn" target="_blank" style="width: auto;right: 174px;top: 3px;background: #ed1c24;min-height: 66px;border-radius: 10px;padding-top: 14px;">
+                <img style="max-height: 40px;margin: auto;border-radius: 10px;padding-left:0px;" src="images/chownow.png"></a>
+           
+            <a style="top: 2px;" href="https://www.doordash.com/business/185569/?utm_source=partner-link&utm_medium=website&utm_campaign=185569&utm_content=red-xl" target="_blank" class="order-btn">
+                <img style="max-height: 72px;" src="https://cdn.doordash.com/media/button/button_red_xl.svg" class="img-responsive"  alt="Order Food Delivery with DoorDash" title="Order Food Delivery with DoorDash"></a>
+            
+
+        </nav>
+        
+        <nav class="nav-15m">
+            <div class="text-center"><a href="#top">
+                <img src="images/15thstreetpizza-logo.png" border="0"></a></div>
+
+            
+
+            <div class="text-center padding-bottom-20">
+                <a href="https://www.grubhub.com/restaurant/15th-street-pizza--pub-2130-jodeco-rd-mcdonough/2091863" target="_blank" style="padding: 5px 20px; display: inline-block; background: #FFF; border-radius: 10px; min-width: 200px;"><img src="images/GH-btn.jpg"></a>
+                 </div>
+
+
+            <div class="text-center padding-bottom-20">
+                <a href="https://order.tbdine.com/15th-street?src=3"  target="_blank" style="padding: 5px 20px; display: inline-block; background: #06556e; border-radius: 10px; min-width: 200px;"><img src="images/TB-btn.png"></a>"
+                 </div>
+
+            <div class="text-center padding-bottom-20">
+             <a href="https://www.doordash.com/business/185569/?utm_source=partner-link&utm_medium=website&utm_campaign=185569&utm_content=red-xl" target="_blank" class="">
+                <img style="max-height: 90px;margin: auto;" src="https://cdn.doordash.com/media/button/button_red_xl.svg" class="img-responsive"  alt="Order Food Delivery with DoorDash" title="Order Food Delivery with DoorDash"></a>
+             </div>
+  
+
+            <div class="text-center padding-bottom-20"><a href="OrderOnline.aspx"  target="_blank">
+                <img style="max-height: 60px;margin: auto;border-radius: 12px;" src="images/chownow.png"></a></div> 
+
+            <nav class="nav" role="navigation">
+                <ul class="nav__list">
+                    <li><a href="Default.aspx">HOME</a> </li>
+                    <li>
+                        <input id="group-1" type="checkbox" hidden />
+                        <label for="group-1"><span class="glyphicon glyphicon-menu-right"></span>MENU</label>
+                        <ul class="group-list">
+                            <li><a href="RegularMenu.aspx#MENU">REGULAR MENU</a></li>
+                            <li><a href="CateringMenu.aspx#CATERING">CATERING MENU</a></li>
+                            <li><a href="BeerMenu.aspx#BEER">BEER MENU</a></li>
+                            <li><a href="WineMenu.aspx#WINE">WINE MENU</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input id="group-2" type="checkbox" hidden />
+                        <label for="group-2"><span class="glyphicon glyphicon-menu-right"></span>GALLERY</label>
+                        <ul class="group-list">
+                            <li><a href="Gallery.aspx#PICTURES">PICTURES</a></li>
+                            <li><a href="Videos.aspx#VIDEOS">VIDEOS</a></li>
+                            <li><a href="AlbumPictures.aspx">PICTURE ALBUM</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Events.aspx#EVENTS">EVENTS </a></li>
+
+                    <li>
+                        <input id="group-4" type="checkbox" hidden />
+                        <label for="group-4"><span class="glyphicon glyphicon-menu-right"></span>TESTIMONIALS </label>
+                        <ul class="group-list">
+                            <li><a href="WriteaReview.aspx#WRITE">WRITE A REVIEW</a></li>
+                            <li><a target="_blank" href="http://www.tripadvisor.com/Restaurant_Review-g35102-d804735-Reviews-15th_Street_Pizza_Pub-McDonough_Georgia.html">CUSTOMER REVIEWS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Register.aspx#CAREERS">CAREERS</a> </li>
+                    <li><a href="Aboutus.aspx#ABOUT">ABOUT US</a> </li>
+                    <li><a href="ContactUs.aspx#CONTACT">CONTACT US</a> </li>
+                </ul>
+            </nav>
+        </nav>
+
+ <!-- Search Styles Start -->
+<style>
+.search-icon {
+    position: fixed;
+    top: 30px;
+    left: 32%;
+    z-index: 9999;
+	color: #ffc80b;
+}
+.search-icon:hover {color: #fff;}
+.search-box {
+	display: none;
+	position: fixed;
+	max-width: 40%;
+    top: 72px;
+    left: 0;
+    z-index: 9999;
+	}
+@media screen and (max-width: 1024px) {
+	.search-box {display: block !important; position:relative; max-width: 100%; top: 0; padding: 10px;}
+	.search-icon, #search-close {display: none;}
+	
+}
+
+/* Design Changes on 26March2020 Start */
+@media screen and (max-width: 480px) {
+    .map-col .recBtn input[type="submit"] {
+    font-size: 14px;
+        }
+}
+/* Design Changes on 26March2020 End */
+
+</style>
+ <!-- Search Styles End -->
+
+<!-- Search Start -->
+<a href="#" class="search-icon"><span class="glyphicon glyphicon-search"></span> Search Menu</a>
+
+<div class="search-box">
+	<div class="input-group">
+	<!--	<input type="text" class="form-control" placeholder="Search for..."> -->
+        <asp:TextBox ID="Txtsearch" class="form-control" placeholder="Search item .." runat="server"></asp:TextBox>
+		  <span class="input-group-btn">
+           <asp:Button ID="Btnsearch" class="btn btn-warning" runat="server" OnClick="Btnsearch_Click" Text="Search" />
+		<!--	<button class="btn btn-warning" type="button">Search</button> -->
+		  </span>
+		  <span class="input-group-btn" id="search-close">
+			<button class="btn btn-default" type="button">x</button>
+		  </span>
+	</div>
+</div>
+<!-- Search End -->
+
+        <div class="container-fluid main-section">
+  <div class="container" style="margin-bottom:-40px">
+    <p class="social"> <a href="http://www.facebook.com/pages/15th-Street-Pizza-Pub/186902627989620" title="facebook" target="_blank"><img src="images/fb-icon.png"></a> <a href="https://plus.google.com/111880389239111882314/about?gl=US&hl=en-US" target="_blank"><img src="images/gplus-icon.png"></a> <a href="https://twitter.com/15thStreetPizza" target="_blank"><img src="images/twit-icon.png"></a> <a href="http://instagram.com/15thstreetpizza" target="_blank"><img src="images/insta-icon.png"></a> <a href="http://www.pinterest.com/15thstreetpizza" target="_blank"><img src="images/pin-icon.png"></a> <a href="http://www.tripadvisor.com/Restaurant_Review-g35102-d804735-Reviews-15th_Street_Pizza_Pub-McDonough_Georgia.html" target="_blank"><img src="images/trip-icon.png"></a><a href="https://www.youtube.com/channel/UCWeXWaB5NAalwl43dK49xog" target="_blank">
+                                                <img src="images/YouTube.png"></a> </p>
+
+
+         
+      
+        </div>
+           
+            <div class="marq-txt">
+          <style>
+              .marq-txt {
+                  margin-top: 100px;
+              }
+      .marq-txt marquee{
+          font-size: 20px;
+    font-weight: 600;
+    color: #0a0b09;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    background: rgba(254, 235, 0, 0.81);
+    padding: 10px;
+    border-radius: 10px;
+      }
+      .marq-txt marquee a {
+                  color: #0d120e;
+              }
+              .marq-txt marquee a:hover, .marq-txt marquee a:focus {
+                  color: darkred;
+              }
+    </style>
+          <marquee onmouseover="stop()" onmouseout="start()" behavior="alternate">
+             <a target="_blank" href='http://www.henrycounty.com/news/details/2020-annual-banquet-awards-ceremonial-passing-of-the-gavel'>
+                 15th Street Pizza & Pub,Awarded Business of the Year 2020 by Henry County Chamber of Commerce
+             </a>
+          </marquee>
+      </div>
+</div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    
+        <div class="container-fluid copyrights-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <p class="padding-top-10">© 2018 15th street pizza.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+                        <p><a href="http://www.facebook.com/pages/15th-Street-Pizza-Pub/186902627989620" target="_blank">
+                            <img src="images/fb-icon.png"></a> <a href="https://plus.google.com/111880389239111882314/about?gl=US&hl=en-US" target="_blank">
+                                <img src="images/gplus-icon.png"></a> <a href="https://twitter.com/15thStreetPizza" target="_blank">
+                                    <img src="images/twit-icon.png"></a> <a href="http://instagram.com/15thstreetpizza" target="_blank">
+                                        <img src="images/insta-icon.png"></a> <a href="http://www.pinterest.com/15thstreetpizza" target="_blank">
+                                            <img src="images/pin-icon.png"></a> <a href="http://www.tripadvisor.com/Restaurant_Review-g35102-d804735-Reviews-15th_Street_Pizza_Pub-McDonough_Georgia.html" target="_blank">
+                                                <img src="images/trip-icon.png"></a><a href="https://www.youtube.com/channel/UCWeXWaB5NAalwl43dK49xog" target="_blank">
+                                                <img src="images/YouTube.png"></a></p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-right">
+                        <p class="padding-top-10">Site Designed, Developed & Maintained by <a href="http://www.syssigma.com">SysSigma.com</a></p>
+                    </div>
+                </div>
+                <div class="row">
+                        <asp:Label ID="lblVisitor" runat="server" CssClass="padding-left-15"></asp:Label>
+                    </div>
+            </div>
+        </div>
+    </div>
+    </form>
+
+    <!-- jQuery Js -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/lightslider.js"></script>
+    <script>
+        $(document).ready(function () {
+            	$(".search-icon").click(function(){
+	              $(".search-box").toggle("fast");
+	              $(".search-box input").focus();
+	            });
+	            $("#search-close").click(function(){
+	              $(".search-box").toggle("fast");
+	            });
+
+
+            $(".recBtn .btn-brand").click(function () {
+                $(".coupForm").show();
+                $(this).hide();
+            });
+
+
+            $("#content-slider").lightSlider({
+                item: 5,
+                speed: 8000,
+                auto: true,
+                loop: true,
+                pause: 8000,
+
+            });
+        });
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 0) {
+                $('p.social').css("z-index", "1");
+                $('.special').css("z-index", "1");
+                $('.nav-15 .center-logo img').addClass('maxH', 1000);
+            }
+            else {
+                $('p.social').css("z-index", "9999");
+                $('.special').css("z-index", "9999");
+                $('.nav-15 .center-logo img').removeClass('maxH', 1000);
+            }
+        });
+
+        $('a[href*="#"]:not([href="#"])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+
+        (function ($) {
+            $(window).load(function () {
+
+                $("#content-1").mThumbnailScroller({
+                    type: "click-50",
+                    theme: "buttons-out"
+                });
+
+            });
+        })(jQuery);
+
+    </script>
+</body>
+</html>
